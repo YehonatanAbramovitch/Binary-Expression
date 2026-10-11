@@ -68,8 +68,8 @@ public abstract class BinaryExpression extends BaseExpression {
     public List<String> getVariables() {
         List<String> lst1 = this.getExpression().getVariables();
         List<String> lst2 = this.getExpression2().getVariables();
-        boolean flag = true;
         for (String s1 : lst1) {
+            boolean flag = true;
             for (String s2 : lst2) {
                 if (s2.equals(s1)) {
                     flag = false;
