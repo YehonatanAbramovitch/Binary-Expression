@@ -49,13 +49,13 @@ Every expression supports:
 
 ## Design
 
-- `Expression` — the interface every expression implements
-- `BaseExpression` — abstract base holding an operand
+- `Expression` - the interface every expression implements
+- `BaseExpression` - abstract base holding an operand
   - `UnaryExpression` → `Not`
   - `BinaryExpression` → `And`, `Or`, `Xor`, `Nand`, `Nor`, `Xnor`
-- `Var` and `Val` — the leaves of the tree
+- `Var` and `Val` - the leaves of the tree
 
-The structure follows the **Composite pattern**: every operation is implemented recursively, with each node delegating to its children. Expressions are treated as immutable — `assign`, `nandify`, `norify` and `simplify` return new expressions rather than modifying the original.
+The structure follows the **Composite pattern**: every operation is implemented recursively, with each node delegating to its children. Expressions are treated as immutable - `assign`, `nandify`, `norify` and `simplify` return new expressions rather than modifying the original.
 
 ## Running
 
@@ -69,4 +69,4 @@ This compiles the sources into `bin/` and runs `ExpressionsTest`, which builds t
 
 ## Author
 
-**Yehonatan Abramovitch** — [Portfolio](https://yehonatanabramovitch.github.io) · [LinkedIn](https://www.linkedin.com/in/yehonatan-abramovitch)
+**Yehonatan Abramovitch** - [Portfolio](https://yehonatanabramovitch.github.io) · [LinkedIn](https://www.linkedin.com/in/yehonatan-abramovitch)
